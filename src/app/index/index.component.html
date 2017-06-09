@@ -1,0 +1,26 @@
+<div class="header">
+  <button (click)="get()">Search posts</button>
+
+  <button (click)="sorting()">{{status}}</button>
+</div>
+
+<div class="container">
+  <div *ngFor="let elem of data; let i = index">
+    <h4>
+      {{elem.title}}
+    </h4>
+    <p>
+      {{elem.body}}
+    </p>
+
+    <h6>
+      postId: {{elem.id}}
+    </h6>
+    <h6>
+      userId: {{elem.userId}}
+    </h6>
+    <br />
+    <br />
+    <button (click)="removeMe(i)">remove</button>
+  </div>
+</div>
